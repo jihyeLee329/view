@@ -1,6 +1,6 @@
 
 //bank.json 파일에서 데이터 가져오기
-fetch('../json/bank.json')
+fetch('https://jihyelee329.github.io/view/account/json/bank.json')
     .then(res => res.json())
     .then(history_list => {
         get_history(history_list)
