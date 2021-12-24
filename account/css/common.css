@@ -1,0 +1,108 @@
+/* common */
+.deposit {color: #FF5F00;}
+.deposit:before{content:"\002b"; display:inline-block; margin-right:5px}
+
+
+
+/* container */
+.container {max-width: 1000px; width: 100%; min-width: 320px; min-height:100vh; background-color: #EEECE5; overflow-y: auto;}
+.main_slider{height: calc(100vh - 76px);}
+
+/* 헤더 */
+header{ display: flex; justify-content: space-between;align-items:center; padding: 12px 21px 0 27px; box-sizing: border-box;}
+header .user{width: 43px;height: 43px; border-radius: 50%; overflow: hidden;}
+header h1{display:inline-block; margin:0 auto;font-size: 18px;font-weight: 500; line-height: 26px;text-align: center;}
+header .icon_wrap > a{display: inline-block; width: 24px; height: 24px;}
+header .icon_wrap .scan{background-image: url('../img/scan_icon.png');}
+header .icon_wrap .search{background-image: url('../img/search_icon.png');}
+header .icon_wrap a + a{margin-left: 18px;}
+
+
+/* 계좌정보 */
+.ac_container{padding: 33px 48px 0; box-sizing: border-box;}
+.ac_container > div{position:relative; padding:14px 14px 6px; border-radius: 12px;background-color: #fff; box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);;}
+.ac_container .ac_num{padding:0 26px; text-align: center;font-size: 14px; line-height: 20px; font-weight: 500; color:#858585 ;}
+.ac_container .ac_wrap{text-align: center; }
+.ac_container .ac_money{padding: 16px 0;font-size: 14px; line-height: 20px; }
+.ac_container .ac_money > span{font-size: 24px ;line-height: 35px; letter-spacing: 2px;}
+.ac_container .grpah_wrap{padding: 0 31px 0 18px;}
+.ac_container .grpah_wrap .graph{width: 100%; height:6px; background: #000;}
+.ac_container .left_money_wrap{padding-top: 8px;font-size: 14px; line-height: 20px; color: #858585; text-align: center;}
+.ac_container .transfer_btn{position: absolute;top: 9px;right: 12px; padding: 5px; font-size:14px; line-height: 20px;color: #000; z-index: 1;}
+.ac_container .graph_wrap{display: flex; justify-content: space-between;}
+.ac_container .graph_range{ width:calc(100% - 31px);}
+
+
+/* 광고 영역 */
+.add_container{padding: 24px 10px 21px; box-sizing: border-box; font-size: 14px; line-height: 20px; text-align: center;}
+.add_container > a > span{display: inline-block; margin-left: 6px; text-decoration: underline;}
+
+/* 히스토리 내역 */
+.kslider{width:100%;height:calc(100% - 310px); position:absolute; bottom:0; padding:25px 30px 0; background-color: #f5f5f5; border-radius: 30px 30px 0 0; box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08); transition: all .3s; z-index:10;}
+.kslider_btn{position: absolute; top:0px; left: 50%; transform: translateX(-50%); padding: 5px 10px 10px; font-size: 0;}
+.kslider_btn > span{ width: 50px; height: 3px; background-color: #c4c4c4;}
+.kslider.click{ height: calc(100vh - 131px); }
+.kslider.click .history_wrap{height: calc(100% - 62px);}
+
+
+/* save_container */
+.save_container {max-width: 100%; overflow-x: auto; font-size:0;white-space: nowrap; padding-bottom: 16px;}
+.save_container > .save{position:relative; overflow:hidden; display:inline-block; width: 162px;border-radius: 6px; padding: 5px 13px 7px; background-color: #dadada; font-size: 12px; line-height: 17px; z-index: 3;}
+.save_container > .save *{color: #fff;}
+.save_container > .save .save_graph{position:absolute; left: 0; top: 0; height: 100%; z-index: -1;}
+.save_container > .save + .save{margin-left: 13px;}
+/* history_wrap */
+.history_wrap{padding-bottom: 20px; overflow-y: auto;height: calc(100vh - 473px);}
+.history_wrap .day + .day{padding-top: 38px; box-sizing: border-box;}
+.history_wrap .day > .date{position:relative; padding-bottom: 8px; font-weight: 700; font-size: 14px;line-height: 20px;}
+.history_wrap .day > .date .total{position:absolute; right:0; color: #b4b4b4; font-weight: 500;}
+.history_wrap .day > .date .total:after{content:"원 지출";}
+.history_wrap .history > li + li{padding-top: 8px;}
+.history_wrap .history > li{display:flex; justify-content:space-between;padding-bottom: 7px; border-bottom: 1px solid #dcdcdc; font-size: 18px; line-height: 26px; color: #444; font-weight: 300; } 
+.history_wrap .history > li .desposit{color:#FF5F00;}
+.history_wrap .history > li .desposit:before{content:'\002B'}
+
+/* nav */
+nav {position:fixed; bottom: 0; left: 0; right: 0;padding: 22px 0; box-sizing: border-box; background:linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);}
+nav > ul{display:table;table-layout: fixed; width: 100%; *justify-content: space-around;}
+nav > ul > li{display:table-cell; vertical-align: middle;*width: 30px;}
+nav > ul > li.home span,
+nav > ul > li.more span{font-size:26px;line-height: 30px;}
+nav > ul > li span{width:100%; height:30px; line-height: 30px !important; color: #fff; text-align: center; margin:0 auto}
+nav > ul > li.on span{color: #005F59;}
+nav > ul > li.on path{fill:#005F59;}
+nav > ul > li > a{display: block;}
+
+
+/* transfer_container */
+.transfer_container{position:fixed;  left:0; right:0; bottom: -100%; transition: all .3s;
+    padding:33px 30px 90px; width: 100vw; height: 100vh; z-index: 10; background: #fff;}
+.transfer_container.show{bottom: 0;}
+    .transfer_container .close_btn{padding:13px; font-size: 14px;line-height: 20px;color: #000; font-weight: 300; position: absolute; right: 0; top: 0; z-index: 1;}
+.transfer_container h2{font-size: 24px; line-height: 35px;font-weight: 500;}
+.transfer_container .transfer_wrap ul{padding-bottom:90px; height: calc(100vh - 193px); overflow-y: auto;}
+.transfer_wrap .direct_input{padding: 33px 0 44px; font-weight: 300;}
+.transfer_wrap .direct_input span{display: block; line-height: 23px;  border: 1px solid #858585; border-radius: 4px; padding: 12px 0 11px; text-align:center;}
+.transfer_wrap ul li > a{display:flex; justify-content:space-between; align-items:center; font-size: 0; font-weight: 300;}
+.transfer_wrap ul li .user_img{width: 55px;height: 55px;border-radius: 50%;overflow:hidden;}
+.transfer_wrap ul li .user_info{padding: 0 17px; width:calc(100% - 79px); font-size: 16px; line-height: 23px;}
+.transfer_wrap ul li .user_info .name{font-size: 18px; line-height: 26px;}
+.transfer_wrap ul li .user_info > p{font-weight: 300;}
+.transfer_wrap ul li .user_info > p:not(.name){color: #444;}
+.transfer_wrap ul li .user_info > p .bank_name{display:inline-block; margin-right:5px;}
+.transfer_wrap ul li .favorite_btn{width: 24px;}
+.transfer_wrap ul li .favorite_btn.chk path{fill:#dadada;}
+.transfer_wrap ul li + li{margin-top: 17px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
