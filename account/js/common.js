@@ -9,8 +9,6 @@ for (n = 0; n < nav_lis.length; n++) {
     });
 }
 
-
-const main_sliders = document.querySelectorAll('.main_slider');
 //save_container의 각각 save의 graph width 조정
 let grh_percents = document.querySelector('.save_container');
 grh_percents = grh_percents.querySelectorAll('.save')
@@ -40,12 +38,21 @@ for (p = 0; p < grh_percents.length; p++) {
 }
 
 
+
+//이체 버튼 클릭했을 때 addClass 'show'
+const target = document.querySelector(".transfer_container");
+document.querySelector('.transfer_btn').addEventListener('click', function () {
+    let bottom = -100;
+    target.classList.add('show');
+});
+
+
 // 이체화면에서 취소 클릭햇을 때 removeClass'show'
 document.querySelector('.close_btn').addEventListener('click', function () {
     target.classList.remove('show')
 });
 
-// 이체리스트 즐겨찾기 체크, 해제 
+// 즐겨찾기 체크, 해제
 const favorites = target.querySelectorAll('.transfer_list');
 for (let s = 0; s < favorites.length; s++) {
     favorites[s].querySelector('.favorite_btn').addEventListener('click', function () {
@@ -58,9 +65,9 @@ for (let s = 0; s < favorites.length; s++) {
 const kslider_btn = document.querySelector('.kslider_btn');
 const kslider = document.querySelector('.kslider');
 kslider_btn.addEventListener('click', function () {
+    const Btn_on = kslider.classList.contains('click');
     kslider.classList.toggle('click');
 });
-
 
 //목표금액 range바 gradient 삽입
 const input_range = document.querySelector('#account_target');
